@@ -3,6 +3,10 @@
 from datetime import date, timedelta
 
 
+class NoRetakeDateError(ValueError):
+    """No valid retake day exists within the semester."""
+
+
 def retake_date(
     exam_date: date, semester_end: date, holidays: tuple[date, ...] = ()
 ) -> date:
@@ -12,4 +16,6 @@ def retake_date(
         candidate += timedelta(days=1)
     if candidate in holidays:
         candidate += timedelta(days=1)
+    if candidate > semester_end:
+        raise NoRetakeDateError(f"No retake date before semester end {semester_end}")
     return candidate
