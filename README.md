@@ -6,7 +6,7 @@
 - [Лабораторна робота № 2: статичне тестування і контрольні точки](docs/lab02/README.md)
 - [Лабораторна робота № 3: проєктування тестових випадків](docs/lab03/README.md)
 - [Лабораторна робота № 4: тест-план, дослідницькі сесії та дефекти](docs/lab04/) · [усі звіти про дефекти](https://github.com/asiaglh/testing-course-halukh/issues?q=is%3Aissue+label%3Abug)
-- [Лабораторна робота № 5: модульні тести, TDD, дублери й покриття](docs/lab05/01-automation.md) · [зелений запуск CI з HTML-звітом](https://github.com/asiaglh/testing-course-halukh/actions/runs/42498618553)
+- [Лабораторна робота № 5: модульні тести, TDD, дублери й покриття](docs/lab05/01-automation.md) · [останні зелені запуски CI з HTML-звітом](https://github.com/asiaglh/testing-course-halukh/actions/workflows/static-checks.yml?query=branch%3Afeature%2Fretake-date+is%3Asuccess)
 
 Застосунок лежить у [app/](app/). Для роботи потрібен [uv](https://docs.astral.sh/uv/): `cd app && uv run pytest`. Гілка `feature/group-report` призначена для рецензування в ЛР 2; її не зливають.
 
