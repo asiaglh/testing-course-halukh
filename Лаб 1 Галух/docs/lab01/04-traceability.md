@@ -63,3 +63,17 @@
 | Р-18 | РП-13 | ТВ-ST-01…19 | 4 стани, 7 допустимих і 17 недопустимих пар, хибна умова випуску, незмінність статусу/оцінок; `docs/lab03/03-state-transitions.md` |
 
 Ці зв'язки фіксують **виконаний** прогін ЛР 3; попередні S1/S2/S3 — план приймальних сценаріїв ЛР 1. Для Р-08 версія правила 48 год у старих сценаріях є історичною й не відповідає уточненню 14 днів; її треба змінити перед наступним прогоном приймальних тестів.
+
+## Виконана простежуваність ЛР 4: Р-19 та регресія
+
+Цей розділ доповнює історичну матрицю Р-01…18 вище. Для Р-19 поки немає сценарію S1/S2/S3: це нова функція версії 0.4.0, перевірена ХС-01.
+
+| Вимога | Ризик | Хартія / перевірки | Звіти | Стан |
+|---|---|---|---|---|
+| Р-19: цілісність імпорту | РП-14 (3×3=9) | [ХС-01](../../../docs/lab04/02-session-1.md): помилка у першому й пізньому рядку, повтор після помилки | [#5](https://github.com/asiaglh/testing-course-halukh/issues/5) | відкритий критичний; ВИ-1/5 не виконано |
+| Р-19: формат і унікальність | РП-15 (3×2=6) | ХС-01: BOM, пробіли, регістр, дублікати в групі/файлі | [#6](https://github.com/asiaglh/testing-course-halukh/issues/6), [#7](https://github.com/asiaglh/testing-course-halukh/issues/7), [#8](https://github.com/asiaglh/testing-course-halukh/issues/8) | відкриті |
+| Р-08 | РП-10 (3×3=9) | ЛР 3: класи й межі; [ХС-02](../../../docs/lab04/03-session-2.md): номер оцінки | [#12](https://github.com/asiaglh/testing-course-halukh/issues/12), [#13](https://github.com/asiaglh/testing-course-halukh/issues/13), [#14](https://github.com/asiaglh/testing-course-halukh/issues/14), [#10](https://github.com/asiaglh/testing-course-halukh/issues/10) | відкриті |
+| Р-17 | РП-12 (3×3=9) | ЛР 3: 14/14 правил; ХС-02: стипендії | [#15](https://github.com/asiaglh/testing-course-halukh/issues/15); питання [#18](https://github.com/asiaglh/testing-course-halukh/issues/18) | дефект відкритий, уточнення чекає відповіді |
+| Р-18 | РП-13 (3×3=9) | ЛР 3: 24/24 пар; ХС-02: події 0/від’ємні | [#9](https://github.com/asiaglh/testing-course-halukh/issues/9), [#16](https://github.com/asiaglh/testing-course-halukh/issues/16), [#17](https://github.com/asiaglh/testing-course-halukh/issues/17) | відкриті |
+
+Числа покриття, фактичні результати та рішення щодо випуску — у [звіті ЛР 4](../../../docs/lab04/06-test-summary.md).
