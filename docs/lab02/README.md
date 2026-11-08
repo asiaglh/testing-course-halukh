@@ -1,5 +1,5 @@
 # Лабораторна робота № 2: статичне тестування
 
-[Рецензія коду](01-code-review.md) · [Ruff](02-static-analysis.md) · [SAST](03-sast.md) · [Контрольні точки](04-quality-gates.md)
+[PR №1 з рецензією](https://github.com/asiaglh/testing-course-halukh/pull/1) · [Рецензія коду](01-code-review.md) · [Ruff](02-static-analysis.md) · [SAST](03-sast.md) · [Контрольні точки](04-quality-gates.md) · [Доказ блокування](img/blocked-pr.png)
 
 Основа — навчальний застосунок викладача, версія `lab02`. Гілка `feature/group-report` збережена для відкритого запиту на злиття; її дефекти не виправляються. Матеріали аналізу підготовлено за допомогою OpenAI Codex, тому студентка має самостійно перевірити коментарі перед захистом.
