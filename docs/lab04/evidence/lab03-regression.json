@@ -1,0 +1,1210 @@
+{
+  "corrections": [
+    {
+      "id": "ТВ-EP-01",
+      "d": 7,
+      "score": 50,
+      "expect": "Grade:50",
+      "classes": [
+        "S1",
+        "D2"
+      ],
+      "actual": {
+        "kind": "value",
+        "value": "Grade(course='Python', score=50, graded_on=datetime.date(2026, 10, 1))"
+      },
+      "actual_kind": "Grade:50",
+      "original_unchanged": true,
+      "passed": true
+    },
+    {
+      "id": "ТВ-EP-02",
+      "d": 7,
+      "score": -1,
+      "expect": "InvalidGradeError",
+      "classes": [
+        "S2",
+        "D2"
+      ],
+      "actual": {
+        "kind": "error",
+        "type": "InvalidGradeError",
+        "message": "оцінка має бути від 0 до 100, отримано -1"
+      },
+      "actual_kind": "InvalidGradeError",
+      "original_unchanged": true,
+      "passed": true
+    },
+    {
+      "id": "ТВ-EP-03",
+      "d": 7,
+      "score": 101,
+      "expect": "InvalidGradeError",
+      "classes": [
+        "S3",
+        "D2"
+      ],
+      "actual": {
+        "kind": "error",
+        "type": "InvalidGradeError",
+        "message": "оцінка має бути від 0 до 100, отримано 101"
+      },
+      "actual_kind": "InvalidGradeError",
+      "original_unchanged": true,
+      "passed": true
+    },
+    {
+      "id": "ТВ-EP-04",
+      "d": 7,
+      "score": 75.5,
+      "expect": "InvalidGradeError",
+      "classes": [
+        "S4",
+        "D2"
+      ],
+      "actual": {
+        "kind": "value",
+        "value": "Grade(course='Python', score=75.5, graded_on=datetime.date(2026, 10, 1))"
+      },
+      "actual_kind": "Grade:75.5",
+      "original_unchanged": true,
+      "passed": false
+    },
+    {
+      "id": "ТВ-EP-05",
+      "d": 7,
+      "score": "75",
+      "expect": "InvalidGradeError",
+      "classes": [
+        "S5",
+        "D2"
+      ],
+      "actual": {
+        "kind": "error",
+        "type": "TypeError",
+        "message": "'<=' not supported between instances of 'int' and 'str'"
+      },
+      "actual_kind": "TypeError",
+      "original_unchanged": true,
+      "passed": false
+    },
+    {
+      "id": "ТВ-EP-06",
+      "d": 7,
+      "score": "abc",
+      "expect": "InvalidGradeError",
+      "classes": [
+        "S6",
+        "D2"
+      ],
+      "actual": {
+        "kind": "error",
+        "type": "TypeError",
+        "message": "'<=' not supported between instances of 'int' and 'str'"
+      },
+      "actual_kind": "TypeError",
+      "original_unchanged": true,
+      "passed": false
+    },
+    {
+      "id": "ТВ-EP-07",
+      "d": 7,
+      "score": true,
+      "expect": "InvalidGradeError",
+      "classes": [
+        "S7",
+        "D2"
+      ],
+      "actual": {
+        "kind": "value",
+        "value": "Grade(course='Python', score=True, graded_on=datetime.date(2026, 10, 1))"
+      },
+      "actual_kind": "Grade:True",
+      "original_unchanged": true,
+      "passed": false
+    },
+    {
+      "id": "ТВ-EP-08",
+      "d": 7,
+      "score": null,
+      "expect": "InvalidGradeError",
+      "classes": [
+        "S8",
+        "D2"
+      ],
+      "actual": {
+        "kind": "error",
+        "type": "TypeError",
+        "message": "'<=' not supported between instances of 'int' and 'NoneType'"
+      },
+      "actual_kind": "TypeError",
+      "original_unchanged": true,
+      "passed": false
+    },
+    {
+      "id": "ТВ-EP-09",
+      "d": -1,
+      "score": 50,
+      "expect": "CorrectionPeriodError",
+      "classes": [
+        "S1",
+        "D1"
+      ],
+      "actual": {
+        "kind": "value",
+        "value": "Grade(course='Python', score=50, graded_on=datetime.date(2026, 10, 1))"
+      },
+      "actual_kind": "Grade:50",
+      "original_unchanged": true,
+      "passed": false
+    },
+    {
+      "id": "ТВ-EP-10",
+      "d": 15,
+      "score": 50,
+      "expect": "CorrectionPeriodError",
+      "classes": [
+        "S1",
+        "D3"
+      ],
+      "actual": {
+        "kind": "error",
+        "type": "CorrectionPeriodError",
+        "message": "виправити оцінку можна до 15.10.2026 включно"
+      },
+      "actual_kind": "CorrectionPeriodError",
+      "original_unchanged": true,
+      "passed": true
+    },
+    {
+      "id": "ТВ-EP-11",
+      "d": 15,
+      "score": -1,
+      "expect": "CorrectionPeriodError",
+      "classes": [
+        "S2",
+        "D3"
+      ],
+      "purpose": "пріоритет помилки дати",
+      "actual": {
+        "kind": "error",
+        "type": "CorrectionPeriodError",
+        "message": "виправити оцінку можна до 15.10.2026 включно"
+      },
+      "actual_kind": "CorrectionPeriodError",
+      "original_unchanged": true,
+      "passed": true
+    },
+    {
+      "id": "ТВ-BVA-01",
+      "d": 7,
+      "score": 0,
+      "expect": "Grade:0",
+      "boundary": "S:0",
+      "actual": {
+        "kind": "value",
+        "value": "Grade(course='Python', score=0, graded_on=datetime.date(2026, 10, 1))"
+      },
+      "actual_kind": "Grade:0",
+      "original_unchanged": true,
+      "passed": true
+    },
+    {
+      "id": "ТВ-BVA-02",
+      "d": 7,
+      "score": 100,
+      "expect": "Grade:100",
+      "boundary": "S:100",
+      "actual": {
+        "kind": "value",
+        "value": "Grade(course='Python', score=100, graded_on=datetime.date(2026, 10, 1))"
+      },
+      "actual_kind": "Grade:100",
+      "original_unchanged": true,
+      "passed": true
+    },
+    {
+      "id": "ТВ-BVA-03",
+      "d": 0,
+      "score": 50,
+      "expect": "Grade:50",
+      "boundary": "D:0",
+      "actual": {
+        "kind": "value",
+        "value": "Grade(course='Python', score=50, graded_on=datetime.date(2026, 10, 1))"
+      },
+      "actual_kind": "Grade:50",
+      "original_unchanged": true,
+      "passed": true
+    },
+    {
+      "id": "ТВ-BVA-04",
+      "d": 14,
+      "score": 50,
+      "expect": "Grade:50",
+      "boundary": "D:14",
+      "actual": {
+        "kind": "error",
+        "type": "CorrectionPeriodError",
+        "message": "виправити оцінку можна до 15.10.2026 включно"
+      },
+      "actual_kind": "CorrectionPeriodError",
+      "original_unchanged": true,
+      "passed": false
+    },
+    {
+      "id": "ТВ-BVA-05",
+      "d": 13,
+      "score": 50,
+      "expect": "Grade:50",
+      "boundary": "D:13",
+      "actual": {
+        "kind": "value",
+        "value": "Grade(course='Python', score=50, graded_on=datetime.date(2026, 10, 1))"
+      },
+      "actual_kind": "Grade:50",
+      "original_unchanged": true,
+      "passed": true
+    },
+    {
+      "id": "ТВ-BVA-06",
+      "d": 16,
+      "score": 50,
+      "expect": "CorrectionPeriodError",
+      "boundary": "D:16",
+      "actual": {
+        "kind": "error",
+        "type": "CorrectionPeriodError",
+        "message": "виправити оцінку можна до 15.10.2026 включно"
+      },
+      "actual_kind": "CorrectionPeriodError",
+      "original_unchanged": true,
+      "passed": true
+    }
+  ],
+  "scholarship": [
+    {
+      "id": "ТВ-DT-01",
+      "rule": "П01",
+      "min_rule": "М3",
+      "funding": "BUDGET",
+      "scores": [],
+      "expect": "NONE",
+      "average": null,
+      "has_fx": false,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.NONE: 'не призначено'>"
+      },
+      "actual_kind": "NONE",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-02",
+      "rule": "П02",
+      "min_rule": "М4",
+      "funding": "BUDGET",
+      "scores": [
+        70
+      ],
+      "expect": "NONE",
+      "average": 70.0,
+      "has_fx": false,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.NONE: 'не призначено'>"
+      },
+      "actual_kind": "NONE",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-03",
+      "rule": "П03",
+      "min_rule": "М5",
+      "funding": "BUDGET",
+      "scores": [
+        80
+      ],
+      "expect": "REGULAR",
+      "average": 80.0,
+      "has_fx": false,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.REGULAR: 'звичайна'>"
+      },
+      "actual_kind": "REGULAR",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-04",
+      "rule": "П04",
+      "min_rule": "М6",
+      "funding": "BUDGET",
+      "scores": [
+        95
+      ],
+      "expect": "INCREASED",
+      "average": 95.0,
+      "has_fx": false,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.INCREASED: 'підвищена'>"
+      },
+      "actual_kind": "INCREASED",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-05",
+      "rule": "П06",
+      "min_rule": "М2",
+      "funding": "BUDGET",
+      "scores": [
+        50
+      ],
+      "expect": "NONE",
+      "average": 50.0,
+      "has_fx": true,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.NONE: 'не призначено'>"
+      },
+      "actual_kind": "NONE",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-06",
+      "rule": "П07",
+      "min_rule": "М2",
+      "funding": "BUDGET",
+      "scores": [
+        59,
+        100
+      ],
+      "expect": "NONE",
+      "average": 79.5,
+      "has_fx": true,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.NONE: 'не призначено'>"
+      },
+      "actual_kind": "NONE",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-07",
+      "rule": "П08",
+      "min_rule": "М2",
+      "funding": "BUDGET",
+      "scores": [
+        59,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "expect": "NONE",
+      "average": 93.16666666666667,
+      "has_fx": true,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.INCREASED: 'підвищена'>"
+      },
+      "actual_kind": "INCREASED",
+      "passed": false
+    },
+    {
+      "id": "ТВ-DT-08",
+      "rule": "П09",
+      "min_rule": "М1",
+      "funding": "CONTRACT",
+      "scores": [],
+      "expect": "NONE",
+      "average": null,
+      "has_fx": false,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.NONE: 'не призначено'>"
+      },
+      "actual_kind": "NONE",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-09",
+      "rule": "П10",
+      "min_rule": "М1",
+      "funding": "CONTRACT",
+      "scores": [
+        70
+      ],
+      "expect": "NONE",
+      "average": 70.0,
+      "has_fx": false,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.NONE: 'не призначено'>"
+      },
+      "actual_kind": "NONE",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-10",
+      "rule": "П11",
+      "min_rule": "М1",
+      "funding": "CONTRACT",
+      "scores": [
+        80
+      ],
+      "expect": "NONE",
+      "average": 80.0,
+      "has_fx": false,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.NONE: 'не призначено'>"
+      },
+      "actual_kind": "NONE",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-11",
+      "rule": "П12",
+      "min_rule": "М1",
+      "funding": "CONTRACT",
+      "scores": [
+        95
+      ],
+      "expect": "NONE",
+      "average": 95.0,
+      "has_fx": false,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.NONE: 'не призначено'>"
+      },
+      "actual_kind": "NONE",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-12",
+      "rule": "П14",
+      "min_rule": "М1",
+      "funding": "CONTRACT",
+      "scores": [
+        50
+      ],
+      "expect": "NONE",
+      "average": 50.0,
+      "has_fx": true,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.NONE: 'не призначено'>"
+      },
+      "actual_kind": "NONE",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-13",
+      "rule": "П15",
+      "min_rule": "М1",
+      "funding": "CONTRACT",
+      "scores": [
+        59,
+        100
+      ],
+      "expect": "NONE",
+      "average": 79.5,
+      "has_fx": true,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.NONE: 'не призначено'>"
+      },
+      "actual_kind": "NONE",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-14",
+      "rule": "П16",
+      "min_rule": "М1",
+      "funding": "CONTRACT",
+      "scores": [
+        59,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "expect": "NONE",
+      "average": 93.16666666666667,
+      "has_fx": true,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.NONE: 'не призначено'>"
+      },
+      "actual_kind": "NONE",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-15",
+      "rule": "П02",
+      "min_rule": "М4",
+      "funding": "BUDGET",
+      "scores": [
+        74,
+        75
+      ],
+      "expect": "NONE",
+      "boundary": "74.5",
+      "average": 74.5,
+      "has_fx": false,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.NONE: 'не призначено'>"
+      },
+      "actual_kind": "NONE",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-16",
+      "rule": "П03",
+      "min_rule": "М5",
+      "funding": "BUDGET",
+      "scores": [
+        74,
+        76
+      ],
+      "expect": "REGULAR",
+      "boundary": "75",
+      "average": 75.0,
+      "has_fx": false,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.REGULAR: 'звичайна'>"
+      },
+      "actual_kind": "REGULAR",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-17",
+      "rule": "П03",
+      "min_rule": "М5",
+      "funding": "BUDGET",
+      "scores": [
+        89,
+        90
+      ],
+      "expect": "REGULAR",
+      "boundary": "89.5",
+      "average": 89.5,
+      "has_fx": false,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.REGULAR: 'звичайна'>"
+      },
+      "actual_kind": "REGULAR",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-18",
+      "rule": "П04",
+      "min_rule": "М6",
+      "funding": "BUDGET",
+      "scores": [
+        89,
+        91
+      ],
+      "expect": "INCREASED",
+      "boundary": "90",
+      "average": 90.0,
+      "has_fx": false,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.INCREASED: 'підвищена'>"
+      },
+      "actual_kind": "INCREASED",
+      "passed": true
+    },
+    {
+      "id": "ТВ-DT-19",
+      "rule": "поза таблицею",
+      "min_rule": "поза таблицею",
+      "funding": "BUDGET",
+      "status": "ON_LEAVE",
+      "scores": [
+        95
+      ],
+      "expect": "NONE",
+      "purpose": "неактивний статус: тлумачення Р-17",
+      "average": 95.0,
+      "has_fx": false,
+      "actual": {
+        "kind": "value",
+        "value": "<Scholarship.INCREASED: 'підвищена'>"
+      },
+      "actual_kind": "INCREASED",
+      "passed": false
+    }
+  ],
+  "state": [
+    {
+      "id": "ТВ-ST-01",
+      "steps": [
+        {
+          "event": "ADD_GRADE",
+          "expected_status": "ACTIVE",
+          "actual": {
+            "kind": "value",
+            "value": "None"
+          },
+          "before": {
+            "status": "ACTIVE",
+            "grades": []
+          },
+          "after": {
+            "status": "ACTIVE",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "passed": true
+        },
+        {
+          "event": "TAKE_LEAVE",
+          "expected_status": "ON_LEAVE",
+          "actual": {
+            "kind": "value",
+            "value": "<Status.ON_LEAVE: 'академвідпустка'>"
+          },
+          "before": {
+            "status": "ACTIVE",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "after": {
+            "status": "ON_LEAVE",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "passed": true
+        },
+        {
+          "event": "RETURN",
+          "expected_status": "ACTIVE",
+          "actual": {
+            "kind": "value",
+            "value": "<Status.ACTIVE: 'навчається'>"
+          },
+          "before": {
+            "status": "ON_LEAVE",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "after": {
+            "status": "ACTIVE",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "passed": true
+        },
+        {
+          "event": "EXPEL",
+          "expected_status": "EXPELLED",
+          "actual": {
+            "kind": "value",
+            "value": "<Status.EXPELLED: 'відрахований'>"
+          },
+          "before": {
+            "status": "ACTIVE",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "after": {
+            "status": "EXPELLED",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "passed": true
+        },
+        {
+          "event": "REINSTATE",
+          "expected_status": "ACTIVE",
+          "actual": {
+            "kind": "value",
+            "value": "<Status.ACTIVE: 'навчається'>"
+          },
+          "before": {
+            "status": "EXPELLED",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "after": {
+            "status": "ACTIVE",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "passed": true
+        },
+        {
+          "event": "TAKE_LEAVE",
+          "expected_status": "ON_LEAVE",
+          "actual": {
+            "kind": "value",
+            "value": "<Status.ON_LEAVE: 'академвідпустка'>"
+          },
+          "before": {
+            "status": "ACTIVE",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "after": {
+            "status": "ON_LEAVE",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "passed": true
+        },
+        {
+          "event": "EXPEL",
+          "expected_status": "EXPELLED",
+          "actual": {
+            "kind": "value",
+            "value": "<Status.EXPELLED: 'відрахований'>"
+          },
+          "before": {
+            "status": "ON_LEAVE",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "after": {
+            "status": "EXPELLED",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "passed": true
+        },
+        {
+          "event": "REINSTATE",
+          "expected_status": "ACTIVE",
+          "actual": {
+            "kind": "value",
+            "value": "<Status.ACTIVE: 'навчається'>"
+          },
+          "before": {
+            "status": "EXPELLED",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "after": {
+            "status": "ACTIVE",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "passed": true
+        },
+        {
+          "event": "GRADUATE",
+          "expected_status": "GRADUATED",
+          "actual": {
+            "kind": "value",
+            "value": "<Status.GRADUATED: 'випускник'>"
+          },
+          "before": {
+            "status": "ACTIVE",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "after": {
+            "status": "GRADUATED",
+            "grades": [
+              "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+            ]
+          },
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-02",
+      "status": "ACTIVE",
+      "scores": [
+        50
+      ],
+      "event": "GRADUATE",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "не можна випустити студента з оцінками Fx"
+      },
+      "before": {
+        "status": "ACTIVE",
+        "grades": [
+          "Grade(course='Предмет 1', score=50, graded_on=datetime.date(2026, 10, 1))"
+        ]
+      },
+      "after": {
+        "status": "ACTIVE",
+        "grades": [
+          "Grade(course='Предмет 1', score=50, graded_on=datetime.date(2026, 10, 1))"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-03",
+      "status": "ACTIVE",
+      "event": "RETURN",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "подія «повернути з академвідпустки» неможлива для статусу «навчається»"
+      },
+      "before": {
+        "status": "ACTIVE",
+        "grades": []
+      },
+      "after": {
+        "status": "ACTIVE",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-04",
+      "status": "ACTIVE",
+      "event": "REINSTATE",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "подія «поновити» неможлива для статусу «навчається»"
+      },
+      "before": {
+        "status": "ACTIVE",
+        "grades": []
+      },
+      "after": {
+        "status": "ACTIVE",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-05",
+      "status": "ON_LEAVE",
+      "event": "TAKE_LEAVE",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "подія «надати академвідпустку» неможлива для статусу «академвідпустка»"
+      },
+      "before": {
+        "status": "ON_LEAVE",
+        "grades": []
+      },
+      "after": {
+        "status": "ON_LEAVE",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-06",
+      "status": "ON_LEAVE",
+      "event": "REINSTATE",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "подія «поновити» неможлива для статусу «академвідпустка»"
+      },
+      "before": {
+        "status": "ON_LEAVE",
+        "grades": []
+      },
+      "after": {
+        "status": "ON_LEAVE",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-07",
+      "status": "ON_LEAVE",
+      "event": "GRADUATE",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "подія «випустити» неможлива для статусу «академвідпустка»"
+      },
+      "before": {
+        "status": "ON_LEAVE",
+        "grades": []
+      },
+      "after": {
+        "status": "ON_LEAVE",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-08",
+      "status": "ON_LEAVE",
+      "event": "ADD_GRADE",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "value",
+        "value": "None"
+      },
+      "before": {
+        "status": "ON_LEAVE",
+        "grades": []
+      },
+      "after": {
+        "status": "ON_LEAVE",
+        "grades": [
+          "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+        ]
+      },
+      "passed": false
+    },
+    {
+      "id": "ТВ-ST-09",
+      "status": "EXPELLED",
+      "event": "TAKE_LEAVE",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "подія «надати академвідпустку» неможлива для статусу «відрахований»"
+      },
+      "before": {
+        "status": "EXPELLED",
+        "grades": []
+      },
+      "after": {
+        "status": "EXPELLED",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-10",
+      "status": "EXPELLED",
+      "event": "RETURN",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "подія «повернути з академвідпустки» неможлива для статусу «відрахований»"
+      },
+      "before": {
+        "status": "EXPELLED",
+        "grades": []
+      },
+      "after": {
+        "status": "EXPELLED",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-11",
+      "status": "EXPELLED",
+      "event": "EXPEL",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "подія «відрахувати» неможлива для статусу «відрахований»"
+      },
+      "before": {
+        "status": "EXPELLED",
+        "grades": []
+      },
+      "after": {
+        "status": "EXPELLED",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-12",
+      "status": "EXPELLED",
+      "event": "GRADUATE",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "подія «випустити» неможлива для статусу «відрахований»"
+      },
+      "before": {
+        "status": "EXPELLED",
+        "grades": []
+      },
+      "after": {
+        "status": "EXPELLED",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-13",
+      "status": "EXPELLED",
+      "event": "ADD_GRADE",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "не можна виставити оцінку відрахованому студенту"
+      },
+      "before": {
+        "status": "EXPELLED",
+        "grades": []
+      },
+      "after": {
+        "status": "EXPELLED",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-14",
+      "status": "GRADUATED",
+      "event": "TAKE_LEAVE",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "подія «надати академвідпустку» неможлива для статусу «випускник»"
+      },
+      "before": {
+        "status": "GRADUATED",
+        "grades": []
+      },
+      "after": {
+        "status": "GRADUATED",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-15",
+      "status": "GRADUATED",
+      "event": "RETURN",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "подія «повернути з академвідпустки» неможлива для статусу «випускник»"
+      },
+      "before": {
+        "status": "GRADUATED",
+        "grades": []
+      },
+      "after": {
+        "status": "GRADUATED",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-16",
+      "status": "GRADUATED",
+      "event": "EXPEL",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "value",
+        "value": "<Status.EXPELLED: 'відрахований'>"
+      },
+      "before": {
+        "status": "GRADUATED",
+        "grades": []
+      },
+      "after": {
+        "status": "EXPELLED",
+        "grades": []
+      },
+      "passed": false
+    },
+    {
+      "id": "ТВ-ST-17",
+      "status": "GRADUATED",
+      "event": "REINSTATE",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "подія «поновити» неможлива для статусу «випускник»"
+      },
+      "before": {
+        "status": "GRADUATED",
+        "grades": []
+      },
+      "after": {
+        "status": "GRADUATED",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-18",
+      "status": "GRADUATED",
+      "event": "GRADUATE",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "error",
+        "type": "InvalidTransitionError",
+        "message": "подія «випустити» неможлива для статусу «випускник»"
+      },
+      "before": {
+        "status": "GRADUATED",
+        "grades": []
+      },
+      "after": {
+        "status": "GRADUATED",
+        "grades": []
+      },
+      "passed": true
+    },
+    {
+      "id": "ТВ-ST-19",
+      "status": "GRADUATED",
+      "event": "ADD_GRADE",
+      "expect": "InvalidTransitionError",
+      "actual": {
+        "kind": "value",
+        "value": "None"
+      },
+      "before": {
+        "status": "GRADUATED",
+        "grades": []
+      },
+      "after": {
+        "status": "GRADUATED",
+        "grades": [
+          "Grade(course='Python', score=80, graded_on=datetime.date(2026, 10, 1))"
+        ]
+      },
+      "passed": false
+    }
+  ]
+}
