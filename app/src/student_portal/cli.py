@@ -27,7 +27,8 @@ def print_students(students: Iterable[Student]) -> None:
         print(f"{s.id:>3}  {s.full_name:<30}{format_average(s.average()):>6}")
 
 
-def run(group: Group) -> None:
+# Legacy menu dispatcher: complexity 13 is baselined for lab02; review on change.
+def run(group: Group) -> None:  # noqa: C901
     while True:
         print(MENU)
         choice = input("> ").strip()
