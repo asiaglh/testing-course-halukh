@@ -1,0 +1,26 @@
+...xxxxxx.....x........x...........x.......x.......x..x.x.x.x..x........ [ 75%]
+.......................                                                  [100%]
+================================ tests coverage ================================
+______________ coverage: platform darwin, python 3.14.10-final-0 _______________
+
+Name                              Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------------
+src/student_portal/grades.py         29      1     14      1    95%   16
+src/student_portal/group.py          42      8      2      0    82%   38-40, 56-57, 60, 63-64
+src/student_portal/importer.py       36      5     10      3    83%   22-23, 33, 47, 50
+src/student_portal/people.py         50      5      4      0    91%   28, 36, 50, 60, 83
+src/student_portal/reminders.py      53      1     10      0    98%   55
+src/student_portal/retake.py          9      1      4      1    85%   18
+src/student_portal/storage.py        29     16      2      0    42%   16, 41-58, 62-64, 68-74
+-----------------------------------------------------------------------------
+TOTAL                               312     37     60      5    88%
+
+5 files skipped due to complete coverage.
+Required test coverage of 85.0% reached. Total coverage: 88.17%
+79 passed, 16 xfailed in 0.26s
+Name                           Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------------------------
+src/student_portal/retake.py       9      1      4      1    85%   18
+--------------------------------------------------------------------------
+TOTAL                              9      1      4      1    85%
+Coverage failure: total of 85 is less than fail-under=100
