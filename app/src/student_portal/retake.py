@@ -10,4 +10,6 @@ def retake_date(
     candidate = exam_date + timedelta(days=7)
     while candidate.weekday() >= 5:
         candidate += timedelta(days=1)
+    if candidate in holidays:
+        candidate += timedelta(days=1)
     return candidate
