@@ -1,13 +1,15 @@
 [project]
 name = "student-portal"
-version = "0.5.0"
+version = "0.6.0"
 description = "Система управління студентами - навчальний застосунок курсу «Тестування та супровід ПЗ»"
 readme = "README.md"
 authors = [
     { name = "Козелко Віталій" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "psycopg[binary]>=3.3.6",
+]
 
 [project.scripts]
 student-portal = "student_portal:main"
@@ -19,10 +21,13 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
+    "hypothesis>=6.170",
+    "mutmut>=3.8",
     "pytest>=9.0",
     "pytest-cov>=7.1.0",
     "pytest-mock>=3.17.0",
     "ruff==0.17.1",
+    "testcontainers>=4.15",
 ]
 
 [tool.ruff]
@@ -51,3 +56,13 @@ omit = ["*/student_portal/cli.py", "*/student_portal/dean.py"]
 show_missing = true
 skip_covered = true
 fail_under = 85
+
+[tool.mutmut]
+source_paths = ["src/"]
+only_mutate = [
+    "src/student_portal/corrections.py",
+    "src/student_portal/scholarship.py",
+    "src/student_portal/retake.py",
+]
+pytest_add_cli_args_test_selection = ["tests/lab05", "tests/lab06/test_mutants.py"]
+also_copy = ["tests/lab05/spec_cases.json"]

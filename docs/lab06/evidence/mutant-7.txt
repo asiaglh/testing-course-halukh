@@ -1,0 +1,12 @@
+# student_portal.corrections.x_correct_grade__mutmut_7: survived
+--- src/student_portal/corrections.py
++++ src/student_portal/corrections.py
+@@ -3,7 +3,7 @@
+     today = today or date.today()
+     elapsed = (today - grade.graded_on).days
+     if elapsed >= CORRECTION_DAYS:
+-        deadline = grade.graded_on + timedelta(days=CORRECTION_DAYS)
++        deadline = grade.graded_on - timedelta(days=CORRECTION_DAYS)
+         raise CorrectionPeriodError(
+             f"виправити оцінку можна до {deadline:%d.%m.%Y} включно"
+         )

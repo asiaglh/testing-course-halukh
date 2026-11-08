@@ -17,9 +17,7 @@ from student_portal.people import Funding, Student
 from student_portal.scholarship import scholarship
 from student_portal.status import Event, Status
 
-SPEC = json.loads(
-    (Path(__file__).resolve().parents[3] / "docs/lab03/spec_cases.json").read_text()
-)
+SPEC = json.loads(Path(__file__).with_name("spec_cases.json").read_text())
 EXCEPTIONS = {
     "CorrectionPeriodError": CorrectionPeriodError,
     "InvalidGradeError": InvalidGradeError,

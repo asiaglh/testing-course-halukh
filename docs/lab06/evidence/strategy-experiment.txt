@@ -1,0 +1,2 @@
+naive: no counterexample within 200 generated examples; predicate_evaluations=200
+equivalence-class: found=(50, [100, 100, 100, 100]); predicate_evaluations=44; scores=[50, 100, 100, 100, 100]
