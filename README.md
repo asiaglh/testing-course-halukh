@@ -9,6 +9,7 @@
 - [Лабораторна робота № 5: модульні тести, TDD, дублери й покриття](docs/lab05/01-automation.md) · [останні зелені запуски CI з HTML-звітом](https://github.com/asiaglh/testing-course-halukh/actions/workflows/static-checks.yml?query=branch%3Afeature%2Fretake-date+is%3Asuccess)
 - [Лабораторна робота № 6: мутаційний аналіз, властивості й PostgreSQL](docs/lab06/) · [зелені запуски CI на main](https://github.com/asiaglh/testing-course-halukh/actions/workflows/static-checks.yml?query=branch%3Amain+is%3Asuccess)
 - [Лабораторна робота № 7: REST API, доступ, Schemathesis і Pact](docs/lab07/) · [останній зелений запуск CI на main](https://github.com/asiaglh/testing-course-halukh/actions/workflows/static-checks.yml?query=branch%3Amain+is%3Asuccess)
+- [Лабораторна робота № 8: E2E-тести, Page Object, трасування і стабільність](docs/lab08/) · [останній зелений запуск CI на main](https://github.com/asiaglh/testing-course-halukh/actions/workflows/static-checks.yml?query=branch%3Amain+is%3Asuccess)
 
 Застосунок лежить у [app/](app/). Для роботи потрібен [uv](https://docs.astral.sh/uv/): `cd app && uv run pytest`. Гілка `feature/group-report` призначена для рецензування в ЛР 2; її не зливають.
 
@@ -25,3 +26,5 @@ OpenAI Codex допоміг проаналізувати навчальний к
 Для ЛР 6 Codex налаштував mutmut, сформулював і реалізував властивості Hypothesis, написав інтеграційні тести з PostgreSQL, запустив локальні перевірки, створив issues і підготував звіти. Це не твердження, що студентка самостійно сформулювала властивості; перед захистом їй потрібно розібрати їхні передумови, межі й контрприклади та самій повторити пояснення.
 
 Для ЛР 7 Codex підготував тести за Р-23, матрицю доступу, запуски Schemathesis, Pact-контракт і звіти, запустив перевірки та оформив дефекти. Це не твердження, що студентка самостійно склала матрицю чи тести: перед захистом їй потрібно звірити кожен очікуваний код зі специфікацією, відтворити ключові дефекти й пояснити суперечність Р-23/Р-24.
+
+Для ЛР 8 Codex створив класи Page Object і E2E-тести, провів експеримент із затримками, зібрав трасування, оформив дефекти та звіти. Це не твердження про самостійне складання студенткою сценаріїв: перед захистом їй потрібно повторити запуск із вікном браузера, відкрити трасування й пояснити очікування кожного тесту за Р-25.

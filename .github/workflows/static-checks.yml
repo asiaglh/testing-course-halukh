@@ -24,9 +24,12 @@ jobs:
         with:
           python-version: '3.14'
       - run: pip install uv==0.13.7
+      - name: Install Chromium for E2E tests
+        working-directory: app
+        run: uv run playwright install --with-deps chromium
       - name: Run tests with branch coverage
         working-directory: app
-        run: uv run pytest --cov --cov-report=term-missing --cov-report=html -rxX
+        run: uv run pytest --tracing retain-on-failure --cov --cov-report=term-missing --cov-report=html -rxX
       - name: Require full retake coverage
         working-directory: app
         run: uv run coverage report --include='*/retake.py' --fail-under=100
@@ -36,6 +39,13 @@ jobs:
         with:
           name: coverage-html
           path: app/htmlcov/
+          if-no-files-found: ignore
+      - name: Upload Playwright traces on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces
+          path: app/test-results/
           if-no-files-found: ignore
   sast:
     runs-on: ubuntu-latest
