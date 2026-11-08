@@ -2,6 +2,8 @@
 
 from datetime import date
 
+import pytest
+
 from student_portal.retake import retake_date
 
 
@@ -21,3 +23,18 @@ def test_tuesday_exam_triangulates_seven_day_rule():
     actual = retake_date(exam, semester_end)
 
     assert actual == date(2026, 11, 10)
+
+
+@pytest.mark.parametrize(
+    "exam",
+    [
+        pytest.param(date(2026, 11, 7), id="saturday"),
+        pytest.param(date(2026, 11, 8), id="sunday"),
+    ],
+)
+def test_weekend_candidate_moves_to_monday(exam):
+    semester_end = date(2026, 11, 30)
+
+    actual = retake_date(exam, semester_end)
+
+    assert actual == date(2026, 11, 16)
