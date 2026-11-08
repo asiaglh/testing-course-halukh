@@ -1,0 +1,48 @@
+..FF                                                                     [100%]
+=================================== FAILURES ===================================
+_______________ test_weekend_candidate_moves_to_monday[saturday] _______________
+
+exam = datetime.date(2026, 11, 7)
+
+    @pytest.mark.parametrize(
+        "exam",
+        [
+            pytest.param(date(2026, 11, 7), id="saturday"),
+            pytest.param(date(2026, 11, 8), id="sunday"),
+        ],
+    )
+    def test_weekend_candidate_moves_to_monday(exam):
+        semester_end = date(2026, 11, 30)
+    
+        actual = retake_date(exam, semester_end)
+    
+>       assert actual == date(2026, 11, 16)
+E       assert datetime.date(2026, 11, 14) == datetime.date(2026, 11, 16)
+E        +  where datetime.date(2026, 11, 16) = date(2026, 11, 16)
+
+app/tests/lab05/test_retake.py:40: AssertionError
+________________ test_weekend_candidate_moves_to_monday[sunday] ________________
+
+exam = datetime.date(2026, 11, 8)
+
+    @pytest.mark.parametrize(
+        "exam",
+        [
+            pytest.param(date(2026, 11, 7), id="saturday"),
+            pytest.param(date(2026, 11, 8), id="sunday"),
+        ],
+    )
+    def test_weekend_candidate_moves_to_monday(exam):
+        semester_end = date(2026, 11, 30)
+    
+        actual = retake_date(exam, semester_end)
+    
+>       assert actual == date(2026, 11, 16)
+E       assert datetime.date(2026, 11, 15) == datetime.date(2026, 11, 16)
+E        +  where datetime.date(2026, 11, 16) = date(2026, 11, 16)
+
+app/tests/lab05/test_retake.py:40: AssertionError
+=========================== short test summary info ============================
+FAILED app/tests/lab05/test_retake.py::test_weekend_candidate_moves_to_monday[saturday]
+FAILED app/tests/lab05/test_retake.py::test_weekend_candidate_moves_to_monday[sunday]
+2 failed, 2 passed in 0.03s
