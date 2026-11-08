@@ -1,0 +1,16 @@
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting tests/lab05/test_retake.py __________________
+ImportError while importing test module '/Users/admin/Documents/ChatGPT/Університет/Тестування/testing-course-halukh/app/tests/lab05/test_retake.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/private/tmp/halukh-python/cpython-3.14.10-macos-aarch64-none/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/tests/lab05/test_retake.py:7: in <module>
+    from student_portal.retake import NoRetakeDateError, retake_date
+E   ImportError: cannot import name 'NoRetakeDateError' from 'student_portal.retake' (/Users/admin/Documents/ChatGPT/Університет/Тестування/testing-course-halukh/app/src/student_portal/retake.py)
+=========================== short test summary info ============================
+ERROR app/tests/lab05/test_retake.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.07s
