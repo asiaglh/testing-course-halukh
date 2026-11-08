@@ -9,7 +9,7 @@
 | Semgrep p/python і `rules/` | Можливе розширення | Не налаштовано | завдання `sast` | обов'язковий статус `sast` | Локальний запуск можна пропустити, але CI з `--error` має блокувати PR |
 | Людська рецензія | Код і diff | Немає | Не автоматизується | PR, розв'язання розмов; 0 approvals у одноосібному репозиторії | Автор не може схвалити власний PR; зміст коментарів потрібно перевіряти вручну |
 
-`pre-commit run --all-files` на `main` пройшов: Ruff check, Ruff format, Gitleaks (`evidence/pre-commit-main.txt`). Хуки встановлено лише у локальний клон, бо вони не розповсюджуються через Git; YAML дозволяє кожному учаснику встановити їх. CI конфігурацію опубліковано в `.github/workflows/static-checks.yml`. GitHub Actions після публікації слід перевірити окремо; локальний успіх не доводить зелений статус віддаленого завдання.
+`pre-commit run --all-files` на `main` пройшов: Ruff check, Ruff format, Gitleaks (`evidence/pre-commit-main.txt`). Хуки встановлено лише у локальний клон, бо вони не розповсюджуються через Git; YAML дозволяє кожному учаснику встановити їх. CI конфігурацію опубліковано в `.github/workflows/static-checks.yml`. На [PR №1](https://github.com/asiaglh/testing-course-halukh/pull/1) обидва завдання `static-checks / lint` і `static-checks / sast` завершилися помилкою, як і очікувалося для навчальної гілки з дефектами.
 
 ## Три джерела зауважень
 
@@ -21,6 +21,6 @@
 
 ## Стан захисту гілки
 
-На GitHub потрібно перевірити дію ruleset для `main`: заборона видалення й force push; PR перед злиттям; 0 схвалень для власного PR; обов'язкове закриття розмов; required checks `lint` і `sast`. Після запуску на `feature/group-report` обидва CI-завдання мають бути червоними, а кнопка злиття заблокованою. Знімок `img/blocked-pr.png` можна додати лише після фактичного спостереження сторінки PR. До цього моменту ці твердження — план, а не підтверджений результат.
+Активний [ruleset `main quality gates`](https://github.com/asiaglh/testing-course-halukh/settings/rules/26800823) застосовується до `main`: забороняє видалення й force push, вимагає PR, актуальну базову гілку, вирішення розмов і успішні перевірки `lint` та `sast` від GitHub Actions. Кількість обов'язкових схвалень — 0, бо автор не може схвалити власний PR. На [PR №1](https://github.com/asiaglh/testing-course-halukh/pull/1) обидві перевірки позначені `Required` і червоні; GitHub показує `Merging is blocked`, а кнопка злиття неактивна. Доказ: [знімок заблокованого PR](img/blocked-pr.png).
 
 Не зливати і не виправляти навчальну гілку `feature/group-report`; на захисті має лишитися відкритий PR із дефектами й рецензією.
