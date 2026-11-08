@@ -64,5 +64,5 @@ only_mutate = [
     "src/student_portal/scholarship.py",
     "src/student_portal/retake.py",
 ]
-pytest_add_cli_args_test_selection = ["tests/lab05"]
+pytest_add_cli_args_test_selection = ["tests/lab05", "tests/lab06/test_mutants.py"]
 also_copy = ["tests/lab05/spec_cases.json"]

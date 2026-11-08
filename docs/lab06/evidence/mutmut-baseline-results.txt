@@ -1,0 +1,2 @@
+    student_portal.corrections.x_correct_grade__mutmut_7: survived
+    student_portal.corrections.x_correct_grade__mutmut_9: survived
