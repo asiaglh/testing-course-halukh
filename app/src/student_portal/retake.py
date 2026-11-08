@@ -12,9 +12,7 @@ def retake_date(
 ) -> date:
     """Return the first valid retake date after the exam."""
     candidate = exam_date + timedelta(days=7)
-    while candidate.weekday() >= 5:
-        candidate += timedelta(days=1)
-    if candidate in holidays:
+    while candidate.weekday() >= 5 or candidate in holidays:
         candidate += timedelta(days=1)
     if candidate > semester_end:
         raise NoRetakeDateError(f"No retake date before semester end {semester_end}")
