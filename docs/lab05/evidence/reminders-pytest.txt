@@ -1,0 +1,7 @@
+.x.x.x..x....                                                            [100%]
+=========================== short test summary info ============================
+XFAIL app/tests/lab05/test_reminders_doubles.py::test_fake_one_letter_lists_all_fx_courses_in_order - відомий дефект #22
+XFAIL app/tests/lab05/test_reminders_doubles.py::test_autospec_ineligible_student_is_not_contacted[on-leave] - відомий дефект #21
+XFAIL app/tests/lab05/test_reminders_doubles.py::test_autospec_ineligible_student_is_not_contacted[graduated] - відомий дефект #21
+XFAIL app/tests/lab05/test_reminders_doubles.py::test_autospec_first_failure_does_not_stop_second_student - відомий дефект #23
+9 passed, 4 xfailed in 0.12s
