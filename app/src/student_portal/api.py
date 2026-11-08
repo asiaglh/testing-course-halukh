@@ -55,7 +55,7 @@ class GradeOut(BaseModel):
     graded_on: date
 
 
-def create_app(group: Group) -> FastAPI:
+def create_app(group: Group) -> FastAPI:  # noqa: C901 - реєструє маршрути в одній фабриці
     app = FastAPI(title="Система управління студентами", version="0.7.0")
 
     def role(authorization: Annotated[str | None, Header()] = None) -> str:
