@@ -1,0 +1,14 @@
+ECTS boundaries:
+60 expected E actual Fx
+67 expected D actual E
+75 expected C actual D
+82 expected B actual C
+90 expected A actual B
+pass_rate with 0 rows -> ZeroDivisionError
+pass_rate with 1 rows -> ZeroDivisionError
+Two grades 45 then 95: report selects 45 (business rule needs clarification)
+Traversal: output outside reports = True
+CSV formula remains unescaped = True
+Shell sink (not executed): call('soffice --headless --convert-to pdf --outdir /var/folders/jq/5k0l5wmd2xx5pvrfbgtgv_zm0000gn/T/tmpq725p4xz/reports reports/group-Python;echo LAB02.csv', shell=True, check=True)
+PDF converter missing: export_pdf returns None without error
+SMTP methods (mock only): ['login', 'send_message']

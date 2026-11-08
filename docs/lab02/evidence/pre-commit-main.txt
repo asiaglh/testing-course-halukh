@@ -1,0 +1,11 @@
+[INFO] Initializing environment for https://github.com/astral-sh/ruff-pre-commit.
+[INFO] Initializing environment for https://github.com/gitleaks/gitleaks.
+[INFO] Installing environment for https://github.com/astral-sh/ruff-pre-commit.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+[INFO] Installing environment for https://github.com/gitleaks/gitleaks.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+ruff check...............................................................Passed
+ruff format..............................................................Passed
+Detect hardcoded secrets.................................................Passed

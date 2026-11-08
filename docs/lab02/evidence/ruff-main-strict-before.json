@@ -1,0 +1,116 @@
+[
+  {
+    "cell": null,
+    "code": "C901",
+    "end_location": {
+      "column": 8,
+      "row": 30
+    },
+    "filename": "/Users/admin/Documents/ChatGPT/Університет/Тестування/testing-course-halukh/app/src/student_portal/cli.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 30
+    },
+    "message": "`run` is too complex (13 > 10)",
+    "name": "complex-structure",
+    "noqa_row": 30,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/complex-structure"
+  },
+  {
+    "cell": null,
+    "code": "S101",
+    "end_location": {
+      "column": 11,
+      "row": 8
+    },
+    "filename": "/Users/admin/Documents/ChatGPT/Університет/Тестування/testing-course-halukh/app/tests/test_grades.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 8
+    },
+    "message": "Use of `assert` detected",
+    "name": "assert",
+    "noqa_row": 8,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/assert"
+  },
+  {
+    "cell": null,
+    "code": "S101",
+    "end_location": {
+      "column": 11,
+      "row": 12
+    },
+    "filename": "/Users/admin/Documents/ChatGPT/Університет/Тестування/testing-course-halukh/app/tests/test_grades.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 12
+    },
+    "message": "Use of `assert` detected",
+    "name": "assert",
+    "noqa_row": 12,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/assert"
+  },
+  {
+    "cell": null,
+    "code": "S101",
+    "end_location": {
+      "column": 11,
+      "row": 16
+    },
+    "filename": "/Users/admin/Documents/ChatGPT/Університет/Тестування/testing-course-halukh/app/tests/test_grades.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 16
+    },
+    "message": "Use of `assert` detected",
+    "name": "assert",
+    "noqa_row": 16,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/assert"
+  },
+  {
+    "cell": null,
+    "code": "S101",
+    "end_location": {
+      "column": 11,
+      "row": 19
+    },
+    "filename": "/Users/admin/Documents/ChatGPT/Університет/Тестування/testing-course-halukh/app/tests/test_group.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 19
+    },
+    "message": "Use of `assert` detected",
+    "name": "assert",
+    "noqa_row": 19,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/assert"
+  },
+  {
+    "cell": null,
+    "code": "S101",
+    "end_location": {
+      "column": 11,
+      "row": 33
+    },
+    "filename": "/Users/admin/Documents/ChatGPT/Університет/Тестування/testing-course-halukh/app/tests/test_group.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 33
+    },
+    "message": "Use of `assert` detected",
+    "name": "assert",
+    "noqa_row": 33,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/assert"
+  }
+]

@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.10, pytest-9.1.1, pluggy-1.7.0 -- /Users/admin/Documents/ChatGPT/Університет/Тестування/testing-course-halukh/app/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /tmp/halukh-lab02-review/app
+configfile: pyproject.toml
+collecting ... collected 12 items
+
+../../../../../../../tmp/halukh-lab02-review/app/tests/test_grades.py::test_excellent_score_is_a PASSED [  8%]
+../../../../../../../tmp/halukh-lab02-review/app/tests/test_grades.py::test_failing_score_is_fx PASSED [ 16%]
+../../../../../../../tmp/halukh-lab02-review/app/tests/test_grades.py::test_grade_exposes_ects_letter PASSED [ 25%]
+../../../../../../../tmp/halukh-lab02-review/app/tests/test_grades.py::test_score_above_maximum_is_rejected PASSED [ 33%]
+../../../../../../../tmp/halukh-lab02-review/app/tests/test_group.py::test_ranking_puts_best_average_first_and_ungraded_last PASSED [ 41%]
+../../../../../../../tmp/halukh-lab02-review/app/tests/test_group.py::test_duplicate_id_is_rejected PASSED [ 50%]
+../../../../../../../tmp/halukh-lab02-review/app/tests/test_group.py::test_missing_student_raises PASSED [ 58%]
+../../../../../../../tmp/halukh-lab02-review/app/tests/test_group.py::test_find_ignores_case PASSED [ 66%]
+../../../../../../../tmp/halukh-lab02-review/app/tests/test_report.py::test_ects_grade_after_refactoring PASSED [ 75%]
+../../../../../../../tmp/halukh-lab02-review/app/tests/test_report.py::test_course_report PASSED [ 83%]
+../../../../../../../tmp/halukh-lab02-review/app/tests/test_report.py::test_pass_rate PASSED [ 91%]
+../../../../../../../tmp/halukh-lab02-review/app/tests/test_report.py::test_export_csv PASSED [100%]
+
+============================== 12 passed in 0.06s ==============================

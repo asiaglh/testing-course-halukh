@@ -1,0 +1,267 @@
+[
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 10,
+      "row": 5
+    },
+    "filename": "/tmp/halukh-lab02-review/app/src/student_portal/report.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 5
+          }
+        }
+      ],
+      "message": "Remove unused import: `os`"
+    },
+    "location": {
+      "column": 8,
+      "row": 5
+    },
+    "message": "`os` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "S105",
+    "end_location": {
+      "column": 36,
+      "row": 19
+    },
+    "filename": "/tmp/halukh-lab02-review/app/src/student_portal/report.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 19
+    },
+    "message": "Possible hardcoded password assigned to: \"SMTP_PASSWORD\"",
+    "name": "hardcoded-password-string",
+    "noqa_row": 19,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/hardcoded-password-string"
+  },
+  {
+    "cell": null,
+    "code": "B006",
+    "end_location": {
+      "column": 55,
+      "row": 33
+    },
+    "filename": "/tmp/halukh-lab02-review/app/src/student_portal/report.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "None",
+          "end_location": {
+            "column": 55,
+            "row": 33
+          },
+          "location": {
+            "column": 53,
+            "row": 33
+          }
+        },
+        {
+          "content": "    if exclude is None:\n        exclude = []\n",
+          "end_location": {
+            "column": 1,
+            "row": 35
+          },
+          "location": {
+            "column": 1,
+            "row": 35
+          }
+        }
+      ],
+      "message": "Replace with `None`; initialize within function"
+    },
+    "location": {
+      "column": 53,
+      "row": 33
+    },
+    "message": "Do not use mutable data structures for argument defaults",
+    "name": "mutable-argument-default",
+    "noqa_row": 33,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/mutable-argument-default"
+  },
+  {
+    "cell": null,
+    "code": "SIM108",
+    "end_location": {
+      "column": 34,
+      "row": 44
+    },
+    "filename": "/tmp/halukh-lab02-review/app/src/student_portal/report.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "ects = \"—\" if score == None else grades[0].ects",
+          "end_location": {
+            "column": 34,
+            "row": 44
+          },
+          "location": {
+            "column": 9,
+            "row": 41
+          }
+        }
+      ],
+      "message": "Replace `if`-`else`-block with `ects = \"—\" if score == None else grades[0].ects`"
+    },
+    "location": {
+      "column": 9,
+      "row": 41
+    },
+    "message": "Use ternary operator `ects = \"—\" if score == None else grades[0].ects` instead of `if`-`else`-block",
+    "name": "if-else-block-instead-of-if-exp",
+    "noqa_row": 41,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp"
+  },
+  {
+    "cell": null,
+    "code": "E711",
+    "end_location": {
+      "column": 25,
+      "row": 41
+    },
+    "filename": "/tmp/halukh-lab02-review/app/src/student_portal/report.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "score is None",
+          "end_location": {
+            "column": 25,
+            "row": 41
+          },
+          "location": {
+            "column": 12,
+            "row": 41
+          }
+        }
+      ],
+      "message": "Replace with `cond is None`"
+    },
+    "location": {
+      "column": 21,
+      "row": 41
+    },
+    "message": "Comparison to `None` should be `cond is None`",
+    "name": "none-comparison",
+    "noqa_row": 41,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/none-comparison"
+  },
+  {
+    "cell": null,
+    "code": "SIM105",
+    "end_location": {
+      "column": 13,
+      "row": 85
+    },
+    "filename": "/tmp/halukh-lab02-review/app/src/student_portal/report.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "import contextlib\n",
+          "end_location": {
+            "column": 1,
+            "row": 13
+          },
+          "location": {
+            "column": 1,
+            "row": 13
+          }
+        },
+        {
+          "content": "with contextlib.suppress(Exception)",
+          "end_location": {
+            "column": 8,
+            "row": 78
+          },
+          "location": {
+            "column": 5,
+            "row": 78
+          }
+        },
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 86
+          },
+          "location": {
+            "column": 1,
+            "row": 84
+          }
+        }
+      ],
+      "message": "Replace `try`-`except`-`pass` with `with contextlib.suppress(Exception): ...`"
+    },
+    "location": {
+      "column": 5,
+      "row": 78
+    },
+    "message": "Use `contextlib.suppress(Exception)` instead of `try`-`except`-`pass`",
+    "name": "suppressible-exception",
+    "noqa_row": 78,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/suppressible-exception"
+  },
+  {
+    "cell": null,
+    "code": "S602",
+    "end_location": {
+      "column": 23,
+      "row": 79
+    },
+    "filename": "/tmp/halukh-lab02-review/app/src/student_portal/report.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 79
+    },
+    "message": "`subprocess` call with `shell=True` identified, security issue",
+    "name": "subprocess-popen-with-shell-equals-true",
+    "noqa_row": 79,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/subprocess-popen-with-shell-equals-true"
+  },
+  {
+    "cell": null,
+    "code": "S110",
+    "end_location": {
+      "column": 13,
+      "row": 85
+    },
+    "filename": "/tmp/halukh-lab02-review/app/src/student_portal/report.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 84
+    },
+    "message": "`try`-`except`-`pass` detected, consider logging the exception",
+    "name": "try-except-pass",
+    "noqa_row": 84,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/try-except-pass"
+  }
+]
