@@ -1,0 +1,84 @@
+# invalid-last-row.csv
+{
+  "case": "invalid-last-row.csv",
+  "start": "2026-11-08T17:19:15+02:00",
+  "end": "2026-11-08T17:19:15+02:00",
+  "exit_code": 0,
+  "before_count": 5,
+  "after_count": 6,
+  "before_emails": [
+    "o.koval@students.example.edu",
+    "a.melnyk@students.example.edu",
+    "i.shevchuk@students.example.edu",
+    "m.bondar@students.example.edu",
+    "s.tkachuk@students.example.edu"
+  ],
+  "after_emails": [
+    "o.koval@students.example.edu",
+    "a.melnyk@students.example.edu",
+    "i.shevchuk@students.example.edu",
+    "m.bondar@students.example.edu",
+    "s.tkachuk@students.example.edu",
+    "m.kravchenko@students.example.edu"
+  ],
+  "before_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "after_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "added_students": [
+    {
+      "id": 6,
+      "first_name": "Марія",
+      "last_name": "Кравченко",
+      "email": "m.kravchenko@students.example.edu",
+      "funding": "державне замовлення",
+      "status": "навчається",
+      "grades": []
+    }
+  ]
+}
+
+STDOUT:
+Консоль деканату. Група КН-11: студентів - 5
+
+1 - список студентів (статус, фінансування, email)
+2 - імпорт студентів з CSV
+3 - змінити статус студента
+4 - стипендії групи
+5 - виправити оцінку
+0 - зберегти і вийти
+> Файл CSV: Помилка введення: рядок 3: фінансування має бути «бюджет» або «контракт»
+
+1 - список студентів (статус, фінансування, email)
+2 - імпорт студентів з CSV
+3 - змінити статус студента
+4 - стипендії групи
+5 - виправити оцінку
+0 - зберегти і вийти
+>   1  Коваль Олена                  навчається      державне замовлення o.koval@students.example.edu
+  2  Мельник Андрій                навчається      державне замовлення a.melnyk@students.example.edu
+  3  Шевчук Ірина                  навчається      державне замовлення i.shevchuk@students.example.edu
+  4  Бондар Максим                 навчається      державне замовлення m.bondar@students.example.edu
+  5  Ткачук Софія                  навчається      державне замовлення s.tkachuk@students.example.edu
+  6  Кравченко Марія               навчається      державне замовлення m.kravchenko@students.example.edu
+
+1 - список студентів (статус, фінансування, email)
+2 - імпорт студентів з CSV
+3 - змінити статус студента
+4 - стипендії групи
+5 - виправити оцінку
+0 - зберегти і вийти
+> Дані збережено у data/group.json
+
+STDERR:

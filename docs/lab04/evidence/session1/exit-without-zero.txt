@@ -1,0 +1,38 @@
+INPUTS:
+2
+/Users/admin/Documents/ChatGPT/Університет/Тестування/testing-course-halukh/app/data/students-import.csv
+[EOF]
+
+EXIT: 1
+UNCHANGED JSON: True
+
+STDOUT:
+Консоль деканату. Група КН-11: студентів - 5
+
+1 - список студентів (статус, фінансування, email)
+2 - імпорт студентів з CSV
+3 - змінити статус студента
+4 - стипендії групи
+5 - виправити оцінку
+0 - зберегти і вийти
+> Файл CSV: Імпортовано студентів: 3
+
+1 - список студентів (статус, фінансування, email)
+2 - імпорт студентів з CSV
+3 - змінити статус студента
+4 - стипендії групи
+5 - виправити оцінку
+0 - зберегти і вийти
+> 
+STDERR:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from student_portal.dean import main; main()
+                                          ~~~~^^
+  File "/Users/admin/Documents/ChatGPT/Університет/Тестування/testing-course-halukh/app/src/student_portal/dean.py", line 99, in main
+    run(group)
+    ~~~^^^^^^^
+  File "/Users/admin/Documents/ChatGPT/Університет/Тестування/testing-course-halukh/app/src/student_portal/dean.py", line 78, in run
+    choice = input("> ").strip()
+             ~~~~~^^^^^^
+EOFError: EOF when reading a line
