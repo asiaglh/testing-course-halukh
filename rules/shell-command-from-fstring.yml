@@ -1,0 +1,10 @@
+rules:
+  - id: shell-command-from-fstring
+    languages: [python]
+    severity: ERROR
+    message: Команду subprocess з shell=True зібрано з f-рядка; передайте список аргументів без оболонки (CWE-78)
+    metadata:
+      cwe: CWE-78
+      category: security
+      technology: [python]
+    pattern: subprocess.$FUNC(f"...", ..., shell=True, ...)
