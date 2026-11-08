@@ -38,3 +38,13 @@ def test_weekend_candidate_moves_to_monday(exam):
     actual = retake_date(exam, semester_end)
 
     assert actual == date(2026, 11, 16)
+
+
+def test_holiday_candidate_moves_to_next_working_day():
+    exam = date(2026, 11, 2)
+    semester_end = date(2026, 11, 30)
+    holidays = (date(2026, 11, 9),)
+
+    actual = retake_date(exam, semester_end, holidays)
+
+    assert actual == date(2026, 11, 10)
