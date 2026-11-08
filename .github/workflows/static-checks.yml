@@ -1,0 +1,28 @@
+name: static-checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+      - run: pip install uv==0.13.7
+      - run: uv run --project app ruff check --output-format=github app
+      - run: uv run --project app ruff format --check app
+      - run: uv run --project app pytest app
+  sast:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - run: pip install semgrep==1.184.0
+      - run: semgrep scan --config p/python --config rules/ --error --metrics=off app/
