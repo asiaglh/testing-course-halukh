@@ -63,3 +63,11 @@ def test_retake_on_last_semester_day_is_allowed():
     semester_end = date(2026, 11, 9)
 
     assert retake_date(exam, semester_end) == semester_end
+
+
+def test_consecutive_holidays_and_weekend_are_skipped():
+    exam = date(2026, 11, 5)
+    semester_end = date(2026, 11, 30)
+    holidays = (date(2026, 11, 12), date(2026, 11, 13))
+
+    assert retake_date(exam, semester_end, holidays) == date(2026, 11, 16)
